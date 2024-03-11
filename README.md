@@ -1,3 +1,14 @@
+### 프로젝트 세팅
+
+- 노드 버전 관리
+  - Volta
+  - https://volta.sh/ 설치
+  - volta install pnpm 설치 가능
+  - 설치 후 volta list로 버전확인
+    - 로컬 node -v 버전확인 필요
+- husky
+  - pnpm install로 초기 husky 설치
+
 ### 폴더 구조 아키텍처
 
 feature-sliced-design 적용
