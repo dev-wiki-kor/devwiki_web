@@ -1,0 +1,14 @@
+html {
+	--color-background: #fff;
+	--color-text: #000;
+}
+
+html[data-theme='dark'] {
+	--color-background: #000;
+	--color-text: #fff;
+}
+
+body {
+	background-color: var(--color-background);
+	color: var(--color-text);
+}
