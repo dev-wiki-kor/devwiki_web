@@ -1,14 +1,14 @@
 //next.config.js
-const stylexPlugin = require('@stylexjs/nextjs-plugin')
+const stylexPlugin = require('@stylexjs/nextjs-plugin');
 
 const nextConfig = {
-	logging: {
-		fetches: {
-			fullUrl: true,
-		},
-	},
-}
+  logging: {
+    fetches: {
+      fullUrl: true,
+    },
+  },
+};
 
 module.exports = stylexPlugin({
-	rootDir: __dirname,
-})(nextConfig)
+  rootDir: __dirname,
+})(nextConfig);

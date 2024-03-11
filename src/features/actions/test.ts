@@ -1,9 +1,9 @@
-'use server'
+'use server';
 
-import { revalidateTag } from 'next/cache'
+import { revalidateTag } from 'next/cache';
 
 const testAction = async () => {
-	revalidateTag('TEST2')
-}
+  revalidateTag('TEST2');
+};
 
-export default testAction
+export default testAction;

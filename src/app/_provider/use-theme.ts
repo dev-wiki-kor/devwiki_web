@@ -1,19 +1,19 @@
-'use client'
+'use client';
 
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react';
 
 export function useTheme() {
-	const [theme, setTheme] = useState(
-		typeof window === 'undefined' ? 'light' : window.__theme || 'light',
-	)
+  const [theme, setTheme] = useState(
+    typeof window === 'undefined' ? 'light' : window.__theme || 'light',
+  );
 
-	const toggleTheme = useCallback(() => {
-		window?.__setPreferredTheme(theme === 'light' ? 'dark' : 'light')
-	}, [theme])
+  const toggleTheme = useCallback(() => {
+    window?.__setPreferredTheme(theme === 'light' ? 'dark' : 'light');
+  }, [theme]);
 
-	useEffect(() => {
-		window.__onThemeChange = setTheme
-	}, [])
+  useEffect(() => {
+    window.__onThemeChange = setTheme;
+  }, []);
 
-	return { theme, toggleTheme }
+  return { theme, toggleTheme };
 }
