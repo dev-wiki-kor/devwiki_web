@@ -2,5 +2,5 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 echo 'Hello!'
-#pnpm lint-staged # 추가
+pnpm lint-staged # 추가
 
