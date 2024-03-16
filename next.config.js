@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 //next.config.js
 const stylexPlugin = require('@stylexjs/nextjs-plugin');
 

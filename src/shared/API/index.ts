@@ -1,11 +1,6 @@
 /* eslint-disable no-undef */
 
-import {
-  IErrorMsg,
-  THttpMethod,
-  THttpResponse,
-  TParams,
-} from '@/shared/API/type';
+import {IErrorMsg, THttpMethod, THttpResponse, TParams,} from '@/shared/API/type';
 
 export default class Fetch {
   private url: string;
@@ -36,7 +31,6 @@ export default class Fetch {
     THttpResponse<S, F>
   > {
     this.setRequestConfig();
-    console.log(this.init);
     try {
       const res = await fetch(this.url, this.init);
       const { code } = await res.clone().json();

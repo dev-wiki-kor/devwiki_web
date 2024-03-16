@@ -1,14 +1,14 @@
 'use client';
 
 import { memo, ReactNode } from 'react';
-import { useTheme } from '@/app/_provider/use-theme';
+import useTheme from '@/shared/hooks/useTheme';
 
 interface Props {
   children: ReactNode;
 }
 
 function GlobalState({ children }: Props) {
-  const { theme, toggleTheme } = useTheme();
+  const { toggleTheme } = useTheme();
   return (
     <>
       <button onClick={toggleTheme}>모드 변경</button>

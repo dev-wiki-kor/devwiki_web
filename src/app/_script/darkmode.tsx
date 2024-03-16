@@ -1,42 +1,30 @@
-type TTheme = 'dark' | 'light';
-
-declare global {
-  interface Window {
-    __theme: TTheme;
-    __onThemeChange: (theme: TTheme) => void;
-    __setPreferredTheme: (theme: TTheme) => void;
-  }
-}
+/* eslint-disable no-underscore-dangle */
+export type TTheme = 'dark' | 'light';
 
 function initDarkMode() {
   function setTheme(newTheme: TTheme) {
     window.__theme = newTheme;
     window.__onThemeChange(newTheme);
     preferredTheme = newTheme;
-    setLocalTheme(newTheme);
+    setCookieTheme(newTheme);
     setRootTheme(newTheme);
   }
 
   function setRootTheme(theme: TTheme) {
-    const html = document.querySelector('html')!;
-    html.setAttribute('data-theme', theme);
+    const body = document.querySelector('body')!;
+    body.setAttribute('data-theme', theme);
   }
 
-  function getLocalTheme() {
-    try {
-      return localStorage?.getItem('theme') ?? '';
-    } catch (e) {
-      console.error(e);
-    }
-    return '';
+  function getCookieTheme() {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; theme=`);
+    if (parts.length === 2) return parts.pop()?.split(';')[0];
+    return null;
   }
 
-  function setLocalTheme(theme: TTheme) {
-    try {
-      localStorage.setItem('theme', theme);
-    } catch (e) {
-      console.error(e);
-    }
+  function setCookieTheme(theme: TTheme) {
+    const updatedCookie = `${encodeURIComponent('theme')}=${encodeURIComponent(theme)}`;
+    document.cookie = `${updatedCookie}; path=/`;
   }
 
   function getSystemTheme() {
@@ -63,7 +51,7 @@ function initDarkMode() {
 
   systemListener();
 
-  let preferredTheme = (getLocalTheme() || getSystemTheme()) as TTheme;
+  let preferredTheme = (getCookieTheme() || getSystemTheme()) as TTheme;
   setTheme(preferredTheme);
 }
 
