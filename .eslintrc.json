@@ -1,7 +1,50 @@
 {
-  "extends": ["next/core-web-vitals", "eslint:recommended", "prettier"],
+  "extends": [
+    "next/core-web-vitals",
+    "airbnb-base",
+    "prettier",
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "unused-imports",
+    "@typescript-eslint"
+  ],
   "rules": {
-    "no-console": "warn",
-    "no-unused-vars": "warn"
+    "import/extensions": [
+      "off"
+    ],
+    "dot-notation": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {}
+    ],
+    "no-unused-vars": "off",
+    "unused-imports/no-unused-imports": "error",
+    "@typescript-eslint/ban-types": "off",
+    "@typescript-eslint/no-explicit-any": "warn",
+    "class-methods-use-this": "off",
+    "camelcase": "off",
+    "no-unused-expressions": "off",
+    "no-use-before-define": "off",
+    "unused-imports/no-unused-vars": [
+      "warn",
+      {
+        "vars": "all",
+        "varsIgnorePattern": "^_",
+        "args": "after-used",
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "vars": "all",
+        "varsIgnorePattern": "^_",
+        "args": "after-used",
+        "argsIgnorePattern": "^_"
+      }
+    ]
   }
 }
