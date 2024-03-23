@@ -1,4 +1,4 @@
-import Fetch from '../../shared/Apibase';
+import Fetch from '../../shared/api';
 
 export const testApi = async () => {
   const timeZone = 'UTC';

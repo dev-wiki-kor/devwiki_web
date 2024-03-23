@@ -1,4 +1,4 @@
-import { HeaderContent } from '@/shared/Apibase/constant';
+import { HeaderContent } from '@/shared/api/constant';
 
 export type THttpMethod = 'GET' | 'POST' | 'PUT';
 

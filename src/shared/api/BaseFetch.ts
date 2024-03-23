@@ -1,5 +1,5 @@
-import { HEADER } from '@/shared/Apibase/constant';
-import { THeaderContentKey, THttpMethod, TParams } from '@/shared/Apibase/type';
+import { HEADER } from '@/shared/api/constant';
+import { THeaderContentKey, THttpMethod, TParams } from '@/shared/api/type';
 
 export default class BaseFetch {
   protected url: string;

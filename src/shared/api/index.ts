@@ -1,12 +1,12 @@
-import BaseFetch from '@/shared/Apibase/BaseFetch';
+import BaseFetch from '@/shared/api/BaseFetch';
 import {
   IErrorMsg,
   THeaderContentKey,
   THttpMethod,
   THttpResponse,
   TParams,
-} from '@/shared/Apibase/type';
-import { HeaderContent, HTTP_STATUS_CODE } from '@/shared/Apibase/constant';
+} from '@/shared/api/type';
+import { HeaderContent, HTTP_STATUS_CODE } from '@/shared/api/constant';
 
 const IS_MOCKING = false;
 
