@@ -1,4 +1,4 @@
-// import { THttpStatusCodeKey } from '@/shared/type/httpStatusCode';
+import { HeaderContent } from '@/shared/Apibase/constant';
 
 export type THttpMethod = 'GET' | 'POST' | 'PUT';
 
@@ -10,9 +10,9 @@ export interface IErrorMsg {
 }
 
 interface IBaseHttpResponse {
-  code: string;
+  code: number;
   httpStatus: number;
-  res: Response;
+  // res: Response;
 }
 
 export interface IHttpSResponse<S> extends IBaseHttpResponse {
@@ -26,3 +26,5 @@ export interface IHttpFResponse<F> extends IBaseHttpResponse {
 }
 
 export type THttpResponse<S, F> = IHttpSResponse<S> | IHttpFResponse<F>;
+
+export type THeaderContentKey = keyof typeof HeaderContent;

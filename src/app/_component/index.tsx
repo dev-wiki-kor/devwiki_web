@@ -1,4 +1,4 @@
-import Date from '@/widgets/pages/main/Date';
+import Date from '@/widgets/date';
 
 export default async function HomeMain() {
   return (

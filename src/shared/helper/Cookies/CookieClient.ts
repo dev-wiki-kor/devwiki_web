@@ -1,8 +1,8 @@
-import { IS_NODE } from '@/shared/Constants';
 import {
   cookieValueToObj,
   makeCookieValue,
-} from '@/shared/Helper/Cookies/util';
+} from '@/shared/helper/Cookies/util';
+import { IS_NODE } from '@/shared/constant/global';
 
 interface ICookieOptions {
   expires?: Date | number | string;

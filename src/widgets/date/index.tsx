@@ -1,6 +1,7 @@
 import { HydrationBoundary } from '@tanstack/react-query';
-import { testApi } from '@/features/test/api';
+import { testApi } from '@/widgets/test/api';
 import getDehydratedQuery from '@/shared/reactQuery/util';
+import Test from '@/widgets/test';
 
 export default async function Date() {
   const { dehydratedQuery } = await getDehydratedQuery({
@@ -19,6 +20,7 @@ export default async function Date() {
       }}
     >
       <div>date</div>
+      <Test />
     </HydrationBoundary>
   );
 }
