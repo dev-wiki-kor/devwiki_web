@@ -29,7 +29,7 @@ export default function RQProvider({ children }: Props) {
     <QueryClientProvider client={queryClient}>
       {children}
       <ReactQueryDevtools
-        initialIsOpen={process.env.NODE_ENV! === 'production'}
+        initialIsOpen={process.env.NODE_ENV !== 'production'}
       />
     </QueryClientProvider>
   );

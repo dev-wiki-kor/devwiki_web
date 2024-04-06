@@ -15,6 +15,7 @@ interface Props {
 
 export default async function getDehydratedQuery({ queryKey, queryFn }: Props) {
   const queryClient = getQueryClient();
+
   await queryClient.prefetchQuery({ queryKey, queryFn });
   const currFetchQuery = queryClient.getQueryData(queryKey);
 
