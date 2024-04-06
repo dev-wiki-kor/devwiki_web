@@ -2,14 +2,15 @@ import { HydrationBoundary } from '@tanstack/react-query';
 import { testApi } from '@/widgets/test/api';
 import getDehydratedQuery from '@/shared/reactQuery/util';
 import Test from '@/widgets/test';
+import * as stylex from '@stylexjs/stylex';
 
 export default async function Date() {
   const { dehydratedQuery } = await getDehydratedQuery({
     queryKey: ['test'],
     queryFn: async () => {
-      const { isSucceed, body } = await testApi();
-      if (!isSucceed) return null;
-      return body;
+      const res = await testApi();
+      if (!res.isSucceed) return null;
+      return res;
     },
   });
 
@@ -19,8 +20,20 @@ export default async function Date() {
         queries: [dehydratedQuery],
       }}
     >
-      <div>date</div>
+      <div {...stylex.props(styles.label)}>date</div>
       <Test />
     </HydrationBoundary>
   );
 }
+
+const styles = stylex.create({
+  label: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'red',
+    color: 'white',
+    width: '100%',
+    height: '50px',
+  },
+});
