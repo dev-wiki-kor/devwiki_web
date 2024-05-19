@@ -1,5 +1,8 @@
 import * as stylex from '@stylexjs/stylex';
 
+// https://www.howdy-mj.me/css/styled-components-to-stylex 내용 참조
+// https://stylexjs.com/docs/learn/theming/defining-variables/ 공식문서 export 방식 참조
+
 export const Font = stylex.defineVars({
   regular: '400',
   semiBold: '600',
@@ -61,6 +64,20 @@ const INTERCEPT = {
 };
 
 // prettier-ignore
+
+/**
+ * xss : 0.5rem (8px)
+ * xs : 0.75rem (12px)
+ * sm : 1rem (16px)
+ * p : 1.5rem (24px)
+ * h5 : 2rem (32px)
+ * h4 : 3rem (48px)
+ * h3 : 4rem (64px)
+ * h2 : 6rem (96px)
+ * h1 : 8rem (128px)
+ *
+ */
+
 export const text = stylex.defineVars({
   xxs: `clamp(${Math.min(MIN_FONT.xxs)}rem, calc(${INTERCEPT.xxs}rem + ${Math.round(10000 * SLOPE.xxs) / 100}vw), ${Math.max(MAX_FONT.xxs)}rem)`,
   xs: `clamp(${Math.min(MIN_FONT.xs)}rem, calc(${INTERCEPT.xs}rem + ${Math.round(10000 * SLOPE.xs) / 100}vw), ${Math.max(MAX_FONT.xs)}rem)`,
@@ -175,6 +192,23 @@ export const spacing = stylex.defineVars({
   xxl: `clamp(${MIN_SPACE.xxl}px, calc(${INTERCEPT_SPACE.xxl}px + ${Math.round(10000 * SLOPE_SPACE.xxl) / 100}vw), ${MAX_SPACE.xxl}px)`,
   xxxl: `clamp(${MIN_SPACE.xxxl}px, calc(${INTERCEPT_SPACE.xxxl}px + ${Math.round(10000 * SLOPE_SPACE.xxxl) / 100}vw), ${MAX_SPACE.xxxl}px)`,
   xxxxl: `clamp(${MIN_SPACE.xxxxl}px, calc(${INTERCEPT_SPACE.xxxxl}px + ${Math.round(10000 * SLOPE_SPACE.xxxxl) / 100}vw), ${MAX_SPACE.xxxxl}px)`,
+});
+
+export const colors = stylex.defineVars({
+  primary: '#5584AC',
+  lightGreen: '#CAFAB9',
+  mint: '#B7F6F3',
+  pink: '#FFC6F9',
+  yellow: '#FFF8B1',
+  lightBlue: '#D1DEE9',
+  green: '#1FA051',
+  gray1: '#F5F5F5',
+  gray2: '#EEEEEE',
+  gray3: '#D9D9D9',
+  gray4: '#939393',
+  gray5: '#7D7D7D',
+  black: '#222222',
+  white: '#FFFFFF',
 });
 
 /**

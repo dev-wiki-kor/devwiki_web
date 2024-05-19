@@ -1,4 +1,6 @@
 const path = require('path');
+const IS_DEV = process.env.NODE_ENV === 'development';
+
 module.exports = {
   presets: ['next/babel'],
   plugins: [
@@ -10,8 +12,9 @@ module.exports = {
         dev: process.env.NODE_ENV === 'development',
         genConditionalClasses: true,
         treeshakeCompensation: true,
+        runtimeInjection: IS_DEV,
         aliases: {
-          '@/*': [path.join(__dirname, '*')],
+          '@/*': [path.join(__dirname, 'src/*')],
         },
         unstable_moduleResolution: {
           type: 'commonJS',

@@ -2,6 +2,7 @@
 
 //next.config.js
 const stylexPlugin = require('@stylexjs/nextjs-plugin');
+const path = require('path');
 
 const nextConfig = {
   logging: {
@@ -13,4 +14,7 @@ const nextConfig = {
 
 module.exports = stylexPlugin({
   rootDir: __dirname,
+  aliases: {
+    '@/*': [path.join(__dirname, 'src/*')],
+  },
 })(nextConfig);
