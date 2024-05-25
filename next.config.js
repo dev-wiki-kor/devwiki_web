@@ -2,6 +2,7 @@
 
 //next.config.js
 const stylexPlugin = require('@stylexjs/nextjs-plugin');
+
 const path = require('path');
 
 const nextConfig = {
@@ -13,6 +14,7 @@ const nextConfig = {
 };
 
 module.exports = stylexPlugin({
+  filename: 'stylex-bundle.css',
   rootDir: __dirname,
   aliases: {
     '@/*': [path.join(__dirname, 'src/*')],

@@ -211,6 +211,10 @@ export const colors = stylex.defineVars({
   white: '#FFFFFF',
 });
 
+export const loc = stylex.defineVars({
+  leftHeader: '15%',
+});
+
 /**
  * Color Tokens
  */

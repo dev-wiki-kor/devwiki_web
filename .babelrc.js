@@ -10,15 +10,15 @@ module.exports = {
       // https://stylexjs.com/docs/api/configuration/babel-plugin/
       {
         dev: process.env.NODE_ENV === 'development',
+        runtimeInjection: false,
         genConditionalClasses: true,
         treeshakeCompensation: true,
-        runtimeInjection: IS_DEV,
         aliases: {
           '@/*': [path.join(__dirname, 'src/*')],
         },
         unstable_moduleResolution: {
           type: 'commonJS',
-          rootDir: path.join(__dirname, '../..'),
+          rootDir: __dirname,
         },
       },
     ],

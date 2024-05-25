@@ -1,5 +1,5 @@
-import NaviHomeSvg from '@/shared/svgs/ㅣink/home.svg';
-import Icon from '@/shared/uIkit/Icon';
+import NaviHomeSvg from '@/shared/svgs/link/home.svg';
+import Icon from '@/shared/uIkit/Icon/base';
 
 export default function NaviHomeIcon() {
   const id = '#home';

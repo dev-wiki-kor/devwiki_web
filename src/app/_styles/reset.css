@@ -158,3 +158,10 @@ button {
 img {
     user-select: none;
 }
+
+svg {
+    user-select: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
