@@ -23,3 +23,7 @@ export type TPolymorphic<
     as?: T;
   },
 > = TRemoveDuplicatedEle<T, Props>;
+
+export type TMakeOptionalKey<T> = {
+  [K in keyof T]?: T[K];
+};

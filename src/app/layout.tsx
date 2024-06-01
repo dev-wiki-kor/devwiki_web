@@ -5,6 +5,7 @@ import './_styles/reset.css';
 import './_styles/global.css';
 import { DarkMode } from '@/app/_script/darkmode';
 import RQProvider from '@/app/_provider/RQProvider';
+import RecoilProvider from '@/app/_provider/ RecoilProvider';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,10 +17,19 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="ko">
       <body suppressHydrationWarning>
         <DarkMode />
-        <GlobalState>
-          <RQProvider>{children}</RQProvider>
-        </GlobalState>
+        <Main>{children}</Main>
+        <div id="modal"></div>
       </body>
     </html>
+  );
+}
+
+function Main({ children }: { children: ReactNode }) {
+  return (
+    <RecoilProvider>
+      <GlobalState>
+        <RQProvider>{children}</RQProvider>
+      </GlobalState>
+    </RecoilProvider>
   );
 }

@@ -209,6 +209,7 @@ export const colors = stylex.defineVars({
   gray5: '#7D7D7D',
   black: '#222222',
   white: '#FFFFFF',
+  skyBlue: '#76BCEF',
 });
 
 export const loc = stylex.defineVars({
