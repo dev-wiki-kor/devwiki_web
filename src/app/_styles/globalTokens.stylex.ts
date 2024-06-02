@@ -212,8 +212,24 @@ export const colors = stylex.defineVars({
   skyBlue: '#76BCEF',
 });
 
-export const loc = stylex.defineVars({
-  leftHeader: '15%',
+export const MEDIA_MOBILE = '@media (max-width: 700px)' as const;
+export const MEDIA_TABLET =
+  '@media (min-width: 701px) and (max-width: 1120px)' as const;
+export const MEDIA_DESKTOP = '@media (min-width: 1121px)' as const;
+
+export const display = stylex.defineVars({
+  mobile: {
+    default: 'block',
+    [MEDIA_MOBILE]: 'none',
+  },
+  tablet: {
+    default: 'initial',
+    [MEDIA_TABLET]: 'none',
+  },
+  desktop: {
+    default: 'initial',
+    [MEDIA_DESKTOP]: 'none',
+  },
 });
 
 /**

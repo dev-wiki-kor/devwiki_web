@@ -1,8 +1,11 @@
 import SearchSvg from '@/shared/svgs/search.svg';
-import Icon from '@/shared/uIkit/Icon/base';
+import Icon from '@/shared/UIKit/Icon/base';
 import { CSSProperties } from 'react';
+import { IStyleX } from '@/shared/type/styleX';
 
-export function SearchIcon() {
+interface Props extends IStyleX {}
+
+export function SearchIcon({ styleX }: Props) {
   const id = '#search';
   const { src } = SearchSvg;
 
@@ -19,6 +22,7 @@ export function SearchIcon() {
       svgAttr={{
         style,
       }}
+      styleX={styleX}
     />
   );
 }

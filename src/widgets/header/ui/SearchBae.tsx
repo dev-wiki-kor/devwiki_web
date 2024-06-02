@@ -1,7 +1,7 @@
 'use client';
 
 import * as stx from '@stylexjs/stylex';
-import { SearchIcon } from '@/shared/uIkit/Icon';
+import { SearchIcon } from '@/shared/UIKit/Icon';
 import { colors } from '@/app/_styles/globalTokens.stylex';
 import useModal from '@/feature/modal/lib/hook/useModal';
 

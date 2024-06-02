@@ -1,19 +1,21 @@
 'use client';
 
-import { ReactNode, useRef } from 'react';
+import { memo, ReactNode, useRef } from 'react';
 import { createPortal } from 'react-dom';
 
 type TParentNode = 'modal';
 
 interface Props {
-  ParentNode: TParentNode;
+  parentNode: TParentNode;
   children: ReactNode;
 }
 
-export default function Portal({ ParentNode, children }: Props) {
+function Portal({ parentNode, children }: Props) {
   const parent = useRef<HTMLDivElement>(
-    document.getElementById(ParentNode) as HTMLDivElement,
+    document.getElementById(parentNode) as HTMLDivElement,
   );
 
   return createPortal(children, parent.current);
 }
+
+export default memo(Portal);

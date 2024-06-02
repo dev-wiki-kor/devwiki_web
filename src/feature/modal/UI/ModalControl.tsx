@@ -2,7 +2,7 @@
 
 import { useRecoilValue } from 'recoil';
 import { modalState } from '@/feature/modal/model/store';
-import Portal from '@/shared/uIkit/Portal';
+import Portal from '@/shared/UIKit/Portal';
 import { ComponentType, useMemo } from 'react';
 import { TModalType } from '@/feature/modal/model/model';
 import dynamic from 'next/dynamic';
@@ -37,7 +37,7 @@ export default function ModalControl() {
   return (
     <>
       {!!Component && (
-        <Portal ParentNode="modal">
+        <Portal parentNode="modal">
           {Component.map((C, index) => (
             <C key={index} />
           ))}

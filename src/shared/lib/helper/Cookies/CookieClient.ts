@@ -1,7 +1,7 @@
 import {
   cookieValueToObj,
   makeCookieValue,
-} from '@/shared/helper/Cookies/util';
+} from '@/shared/lib/helper/Cookies/util';
 import { IS_NODE } from '@/shared/constant/global';
 
 interface ICookieOptions {

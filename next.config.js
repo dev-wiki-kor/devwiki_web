@@ -14,7 +14,7 @@ const nextConfig = {
 };
 
 module.exports = stylexPlugin({
-  filename: 'stylex-bundle.css',
+  filename: 'styleX.ts-bundle.css',
   rootDir: __dirname,
   aliases: {
     '@/*': [path.join(__dirname, 'src/*')],
