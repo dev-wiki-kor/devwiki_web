@@ -24,6 +24,6 @@ export type TPolymorphic<
   },
 > = TRemoveDuplicatedEle<T, Props>;
 
-export type TMakeOptionalKey<T> = {
+export type TMakeOptionalKey<T extends {}> = {
   [K in keyof T]?: T[K];
 };

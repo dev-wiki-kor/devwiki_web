@@ -5,8 +5,6 @@ import {
   StyleXArray,
 } from '@stylexjs/stylex/lib/StyleXTypes';
 
-// type TStxProps = Parameters<typeof stx.props>;
-
 export function stxP(
   this: null | undefined | unknown,
   ...styles: ReadonlyArray<
