@@ -181,6 +181,20 @@ const INTERCEPT_SPACE = {
 };
 
 // prettier-ignore
+/**
+ * spacing tokens
+ * xxxs: 2px
+ * xxs: 4px
+ * xs: 6px
+ * sm: 8px
+ * md: 12px
+ * lg: 16px
+ * xl: 24px
+ * xxl: 32px
+ * xxxl: 48px
+ * xxxxl: 64px
+ */
+
 export const spacing = stylex.defineVars({
   xxxs: `clamp(${MIN_SPACE.xxxs}px, calc(${INTERCEPT_SPACE.xxxs}px + ${Math.round(10000 * SLOPE_SPACE.xxxs) / 100}vw), ${MAX_SPACE.xxxs}px)`,
   xxs: `clamp(${MIN_SPACE.xxs}px, calc(${INTERCEPT_SPACE.xxs}px + ${Math.round(10000 * SLOPE_SPACE.xxs) / 100}vw), ${MAX_SPACE.xxs}px)`,

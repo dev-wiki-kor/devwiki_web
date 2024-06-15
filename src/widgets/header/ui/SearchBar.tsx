@@ -12,14 +12,23 @@ export default function SearchBar() {
   };
 
   return (
-    <button {...stx.props(styles.container)} onClick={handleClick}>
-      <input {...stx.props(styles.input)} type="text" disabled={true} />
-      <SearchIcon />
-    </button>
+    <div {...stx.props(styles.box)}>
+      <button {...stx.props(styles.container)} onClick={handleClick}>
+        <input {...stx.props(styles.input)} type="text" disabled={true} />
+        <SearchIcon />
+      </button>
+    </div>
   );
 }
 
 const styles = stx.create({
+  box: {
+    display: 'flex',
+    alignItems: 'center',
+    // todo 변경 필요
+    justifyContent: 'center',
+    flex: '1',
+  },
   container: {
     width: '100%',
     maxWidth: '694px',

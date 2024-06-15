@@ -1,10 +1,12 @@
 import * as stx from '@stylexjs/stylex';
 import { colors } from '@/app/_styles/globalTokens.stylex';
-import SearchBar from '@/widgets/header/ui/SearchBae';
+import SearchBar from '@/widgets/header/ui/SearchBar';
+import Logo from '@/widgets/header/ui/Logo';
 
 export default function Header() {
   return (
     <header {...stx.props(styles.container)}>
+      <Logo />
       <SearchBar />
     </header>
   );
@@ -16,6 +18,7 @@ const styles = stx.create({
     height: '70px',
     display: 'flex',
     alignItems: 'center',
+    // justifyContent: 'space-between',
     backgroundColor: colors.skyBlue,
   },
 });
