@@ -9,10 +9,8 @@ export default function HomeLayout({ children }: { children: ReactNode }) {
   return (
     <div>
       <Header />
-      <main {...stxP(styles.container)}>
-        <Sidebar />
-        {children}
-      </main>
+      <Sidebar />
+      <main {...stxP(styles.container)}>{children}</main>
     </div>
   );
 }

@@ -7,14 +7,21 @@
 import { TEleAttr } from '@/shared/type/mapped';
 import { IStyleX } from '@/shared/type/styleX';
 import { stxP } from '@/shared/lib/util/stylex';
+import { StyleXStyles } from '@stylexjs/stylex';
 
 export interface IconProps extends IStyleX {
   src: any;
   id: string;
   title: string;
+  style?: StyleXStyles;
   className?: string;
   svgAttr?: TEleAttr<'svg'>;
 }
+
+export type TOptionalIconProps = Pick<
+  IconProps,
+  'style' | 'svgAttr' | 'className'
+>;
 
 export default function Icon({
   src,

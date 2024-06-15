@@ -1,12 +1,12 @@
 import * as stylex from '@stylexjs/stylex';
 import { stxP } from '@/shared/lib/util/stylex';
 import Image, { ImageProps } from 'next/image';
-import { TMakeOptionalKey } from '@/shared/type/mapped';
+import { TOptional } from '@/shared/type/mapped';
 import main_intro from '../../../../public/imgs/main_intro.jpg';
 
 interface Props {
   imgKey: keyof typeof IMAGE;
-  imgProps?: TMakeOptionalKey<ImageProps>;
+  imgProps?: TOptional<ImageProps>;
 }
 
 const IMAGE = {

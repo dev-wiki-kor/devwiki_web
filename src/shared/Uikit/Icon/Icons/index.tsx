@@ -1,5 +1,5 @@
 import SearchSvg from '@/shared/svgs/search.svg';
-import Icon from '@/shared/UIKit/Icon/svgBase';
+import Icon from '@/shared/UIKit/Icon/base';
 import { CSSProperties } from 'react';
 import { IStyleX } from '@/shared/type/styleX';
 

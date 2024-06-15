@@ -1,3 +1,2 @@
 export { SearchIcon } from './Icons';
-
-export default {};
+export { default as NaviIcon } from './navi';
