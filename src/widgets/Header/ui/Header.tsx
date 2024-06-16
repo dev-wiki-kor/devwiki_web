@@ -1,7 +1,7 @@
 import * as stx from '@stylexjs/stylex';
 import { colors } from '@/app/_styles/globalTokens.stylex';
-import SearchBar from '@/widgets/header/ui/SearchBar';
-import Logo from '@/widgets/header/ui/Logo';
+import SearchBar from '@/widgets/Header/ui/SearchBar';
+import Logo from '@/widgets/Header/ui/Logo';
 
 export default function Header() {
   return (

@@ -1,15 +1,15 @@
 import * as stx from '@stylexjs/stylex';
 import { stxP } from '@/shared/lib/util/stylex';
 
-import WelcomeMsg from '@/widgets/sidebar/ui/WelcomMgs';
-import Navigation from '@/widgets/sidebar/ui/Navigation';
+import WelcomeMsg from '@/widgets/Navi/ui/WelcomMgs';
+import Navigation from '@/widgets/Navi/ui/Navigation';
 
-export default function Sidebar() {
+export default function Index() {
   return (
-    <aside {...stxP(styles.container)}>
+    <nav {...stxP(styles.container)}>
       <WelcomeMsg />
       <Navigation />
-    </aside>
+    </nav>
   );
 }
 

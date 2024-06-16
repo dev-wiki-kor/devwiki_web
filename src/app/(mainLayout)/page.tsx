@@ -1,5 +1,5 @@
 import HomeMain from '@/app/_component';
-import MainIntro from '@/widgets/mainIntro/ui';
+import MainIntro from '@/widgets/MainIntro/ui';
 
 export default function Home() {
   return (

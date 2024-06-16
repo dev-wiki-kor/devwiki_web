@@ -2,9 +2,9 @@ import * as stylex from '@stylexjs/stylex';
 import { colors } from '@/app/_styles/globalTokens.stylex';
 import { stxP } from '@/shared/lib/util/stylex';
 import { ReactNode } from 'react';
-import IntroTitle from '@/widgets/mainIntro/ui/IntroTitle';
-import IntroImage from '@/widgets/mainIntro/ui/IntroImage';
-import IntroDescription from '@/widgets/mainIntro/ui/IntroDescription';
+import IntroTitle from '@/widgets/MainIntro/ui/IntroTitle';
+import IntroImage from '@/widgets/MainIntro/ui/IntroImage';
+import IntroDescription from '@/widgets/MainIntro/ui/IntroDescription';
 
 interface Props {
   children: ReactNode;

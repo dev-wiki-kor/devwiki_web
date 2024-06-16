@@ -246,6 +246,45 @@ export const display = stylex.defineVars({
   },
 });
 
+// export const titles = stylex.defineVars({
+//   h1: {
+//     fontSize: text.h1,
+//     fontWeight: Font.bold,
+//     lineHeight: '24px',
+//     color: '#444',
+//   },
+//   h2: {
+//     fontSize: text.h2,
+//     fontWeight: Font.bold,
+//     lineHeight: '24px',
+//     color: '#444',
+//   },
+//   h3: {
+//     fontSize: text.h3,
+//     fontWeight: Font.bold,
+//     lineHeight: '24px',
+//     color: '#444',
+//   },
+//   h4: {
+//     fontSize: text.h4,
+//     fontWeight: Font.bold,
+//     lineHeight: '24px',
+//     color: '#444',
+//   },
+//   h5: {
+//     fontSize: text.h5,
+//     fontWeight: Font.bold,
+//     lineHeight: '24px',
+//     color: '#444',
+//   },
+//   p: {
+//     fontSize: text.p,
+//     fontWeight: Font.regular,
+//     lineHeight: '24px',
+//     color: '#444',
+//   },
+// });
+
 /**
  * Color Tokens
  */
@@ -331,10 +370,4 @@ export const globalTokens = stylex.defineVars({
       'rgba(1, 65, 255, 0.3)',
     ].join(', ')})`,
   },
-});
-
-export const scales = stylex.defineVars({
-  small: 'scale(0.95)',
-  medium: 'scale(1)',
-  large: 'scale(1.2)',
 });

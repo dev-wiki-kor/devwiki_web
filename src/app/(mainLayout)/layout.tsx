@@ -1,16 +1,20 @@
 import * as stx from '@stylexjs/stylex';
 
 import { ReactNode } from 'react';
-import { Sidebar } from '@/widgets/sidebar';
-import Header from '@/widgets/header/ui/Header';
+import Header from '@/widgets/Header/ui/Header';
 import { stxP } from '@/shared/lib/util/stylex';
+import { Navi } from '@/widgets/Navi';
+import { Sidebar } from '@/widgets/Sidebar';
 
 export default function HomeLayout({ children }: { children: ReactNode }) {
   return (
     <div>
       <Header />
-      <Sidebar />
-      <main {...stxP(styles.container)}>{children}</main>
+      <Navi />
+      <main {...stxP(styles.container)}>
+        {children}
+        <Sidebar />
+      </main>
     </div>
   );
 }
